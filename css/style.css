@@ -119,6 +119,17 @@ body {
         transform: translateX(-200%);
     }
 }
+#popular-head {
+    margin: 1em 5.6em;
+}
+#badge-new {
+    margin: 0 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.trend-container {
+    padding: 0 5.6em;
+}
+
 /* dashboard */
 
 /* about */
@@ -141,3 +152,25 @@ body {
     padding: 0 4em;
 }
 /* about */
+
+/* story */
+.box-image {
+    text-align: center;
+}
+#image {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    width: 350px;
+    height: 250px;
+}
+#text {
+    background-color: #ffffff;
+    width: 350px;
+    height: 70px;
+    padding-top: 25px;
+    margin-left: 49.5px;
+}
+.story-container {
+    display: flex;
+    margin-top: 50px;
+}
+/* story */

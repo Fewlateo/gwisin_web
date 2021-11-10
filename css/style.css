@@ -88,6 +88,11 @@ body {
     background-image: url('../assets/bgv2.png');
     background-size: cover;
 }
+#header {
+    font-family: 'melt monster';
+    font-size: 64px;
+    font-weight: bolder;
+}
 /* @a */
 
 /* dashboard */
@@ -121,6 +126,10 @@ body {
 }
 #popular-head {
     margin: 1em 5.6em;
+}
+#previous-head {
+    margin-top: 3em;
+    margin-left: 7em;
 }
 #badge-new {
     margin: 0 0.5em;
@@ -178,9 +187,29 @@ body {
     height: 70px;
     padding-top: 25px;
     margin-left: 49.5px;
+    color: #313131;
 }
 .story-container {
     display: flex;
     margin-top: 50px;
 }
 /* story */
+
+/* audio */
+/* HORIZONTAL SCROLL */
+.scroll-container{
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px 70px 5px 20px;
+    background: transparent;
+    height: 100%;
+    border-radius:15px;
+  }
+  .gridscroll{
+    display:inline-block;
+  }
+  
+  .gridscroll img {
+    margin-right:22px;
+  }
+/* audio */

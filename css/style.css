@@ -88,6 +88,14 @@ body {
     background-image: url('../assets/bgv2.png');
     background-size: cover;
 }
+#bg2 {
+    background-image: url('../assets/WebStorybg.png');
+    background-size: cover;
+}
+#bg3 {
+    background-image: url('../assets/WebbgAbout.png');
+    background-size: cover;
+}
 #header {
     font-family: 'melt monster';
     font-size: 64px;
@@ -203,13 +211,16 @@ body {
     padding: 5px 70px 5px 20px;
     background: transparent;
     height: 100%;
-    border-radius:15px;
+    border-radius: 15px;
   }
   .gridscroll{
     display:inline-block;
   }
   
-  .gridscroll img {
-    margin-right:22px;
+  .gridscroll iframe {
+    margin-right: 22px;
+  }
+  .head-channel {
+      margin: 22px 22px;
   }
 /* audio */

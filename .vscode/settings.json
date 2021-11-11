@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "gridscroll",
+        "GWISIN",
         "preconnect",
         "Storybg",
         "theghostradio",
@@ -8,5 +9,6 @@
         "คืนพุธ",
         "มุดผ้าห่ม",
         "เล่าเรื่องผี"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }

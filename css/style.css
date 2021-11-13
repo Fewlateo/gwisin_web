@@ -96,6 +96,10 @@ body {
     background-image: url('../assets/WebbgAbout.png');
     background-size: cover;
 }
+#bg4 {
+    background-image: url('../assets/WebAudiobg.png');
+    background-size: cover;
+}
 #header {
     font-family: 'melt monster';
     font-size: 64px;

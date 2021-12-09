@@ -21,6 +21,16 @@ router.get("/story/:title", async (req, res) => {
   res.render("view_story", {doc});
 });
 
+router.post("/search", async(req,res) => {
+  try {
+    let searchStory = req.body.searchStory;
+    const doc = await title.find({title: { $regex: searchStory, $options: 'i' }}).sort({ title: 'asc', test: -1 })
+    res.render("search", {doc});
+   
+  }catch(error) {
+    console.log(error)
+  }
+})
 
 router.get("/about", async (req, res) => {
     res.render("about");

@@ -18,4 +18,8 @@ const titleSchema = mongoose.Schema({
     }
 })
 
+
+titleSchema.index({ title: 'regex', story: 'regex'})
+// titleSchema.index({"$**": 'regex'})
+
 module.exports = mongoose.model("Title", titleSchema);

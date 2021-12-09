@@ -44,15 +44,7 @@ input[type=text] {
     border-radius: 20px;
     text-align: left;
 }
-/* .navbar-search {
-    font-size: 1em;
-    padding-top: 15px;
-    padding-right: 25px;
-    color: #dadada;
-    text-decoration: none;
-    line-height: 25px;
-    display: inline-block;
-} */
+
 .logo {
     line-height: 10px;
 }
@@ -498,9 +490,6 @@ section .set div:nth-child(8) {
     .navbar-menu {
         margin-top: 10px;
     }
-    /* .navbar-search {
-        margin-top: 10px;
-    } */
 
 }
 /* responsive */

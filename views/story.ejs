@@ -47,6 +47,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    
   </head>
   <body id="bg2">
     <header>
@@ -69,9 +70,49 @@
                 <li class="navbar-item">
                     <a class="navbar-menu" href="/about">About</a>
                 </li>
-                <div class="navbar-search">
-                    <input type="text" placeholder="           Search...">
-                </div>
+
+                <!-- <div class="dropdown">
+                  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                    <a href="#about">About</a>
+                    <a href="#base">Base</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#custom">Custom</a>
+                    <a href="#support">Support</a>
+                    <a href="#tools">Tools</a>
+                  </div>
+                </div> -->
+
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+                      <table id="myTable">
+                        <tr class="header">
+                          <th style="width:60%;">Name</th>
+                          <th style="width:40%;">Country</th>
+                        </tr>
+                        <tr>
+                          <td>Alfreds Futterkiste</td>
+                          <td>Germany</td>
+                        </tr>
+                        <tr>
+                          <td>Berglunds snabbkop</td>
+                          <td>Sweden</td>
+                        </tr>
+                        <tr>
+                          <td>Island Trading</td>
+                          <td>UK</td>
+                        </tr>
+                        <tr>
+                          <td>Koniglich Essen</td>
+                          <td>Germany</td>
+                        </tr>
+                      </table>
+                
+                <!-- <div class="navbar-search">
+                    <input type="text" placeholder="Search...">
+                </div> -->
+
             </ul>
         </div>
     </nav>
@@ -96,4 +137,27 @@
         <% } %>
         <% } %>
   </body>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+    
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
 </html>

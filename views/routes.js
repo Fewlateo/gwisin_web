@@ -34,4 +34,12 @@ router.get("/pageone", async (req, res) => {
     res.render("pageone");
 });
 
+
+
+
+// router.get('/', recipeController.story)
+// router.get('/title', recipeController.exploretitle)
+// router.get('/title/:id', recipeController.exploretitleById)
+// router.post('/search', recipeController.story)
+
 module.exports = router;

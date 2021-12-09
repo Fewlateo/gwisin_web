@@ -81,19 +81,21 @@
       <h1 id="header">STORY OF HORROR</h1>
     </div>
 <!-- ejs code -->
-    <% for(var i = 0; i < doc.length; i++){ %>
+    <div class="box-only-one">
+      <% for(var i = 0; i < doc.length; i++){ %>
         <% if ((i+1)%3 === 1) { %> <!--เริ่มที่ story แรกของแถวจะเปิด div class story container-->
-        <div class="story-container justify-content-center">
-          <% } %>
-          <a href=<%= "/story/" + doc[i].title %>>
-          <div class="col-md box-image">
-            <img id="image" src=<%= "/assets/titles/" + doc[i].photoUrl %> id="image" />
-            <p id="text"> <%= doc[i].title %></p>
+          <div class="story-container justify-content-center">
+            <% } %>
+            <a href=<%= "/story/" + doc[i].title %>>
+            <div class="col-md box-image">
+              <img id="image" src=<%= "/assets/titles/" + doc[i].photoUrl %> id="image" />
+              <p id="text"> <%= doc[i].title %></p>
+            </div>
+            <% if ((i+1)%3 === 0 || i === doc.length-1) { %> <!--หลังครบ 3 อันหรือเป็นอันสุดท้ายจะเอา tag มาปิด มี tag story container ข้างใน การ์ด storyมากสุด 3อัน-->
           </div>
-          <% if ((i+1)%3 === 0 || i === doc.length-1) { %> <!--หลังครบ 3 อันหรือเป็นอันสุดท้ายจะเอา tag มาปิด มี tag story container ข้างใน การ์ด storyมากสุด 3อัน-->
-        </div>
-      </a>
+        </a>
         <% } %>
         <% } %>
+    </div>
   </body>
 </html>

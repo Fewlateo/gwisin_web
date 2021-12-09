@@ -61,6 +61,7 @@ input[type=text] {
     height: 100px;
     width: 100px;
     border-radius: 180px;
+    margin-right: 40px;
     /* for more 1440-1080px = margin-left: 40em; */
 }
 /* nav-bar */
@@ -293,6 +294,9 @@ body {
 .img-story {
     text-align: center;
     margin: 2em 0;
+    width: 625px;
+    height: 455px;
+    box-shadow: 3px 3px 5px #1b1b1b;
 }
 .detail-story {
     background-color: #313131;
@@ -397,15 +401,19 @@ section .set div:nth-child(8) {
     p {
         font-size: auto;
     }
-    img {
-        width: auto;
-        height: auto;
+    .img-story {
+        width: 450px;
+        height: 355px;
+        background-position: center;
     }
     .navbar-menu {
         margin-top: 10px;
     }
     .navbar-search {
         margin-top: 10px;
+    }
+    section .set {
+        scale: 0.8;
     }
 }
 /* responsive */

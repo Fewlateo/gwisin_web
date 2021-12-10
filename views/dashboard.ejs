@@ -55,34 +55,29 @@
     <div class="row" style="padding-bottom: 20px;">
         <div class="col-lg-7">
             <h5 id="popular-head">Random Story<span class="badge bg-primary" id="badge-new">Trending</span></h2>
-              
-                <div class="trend-container" style="justify-content: center;">
-                
-          
+                <div class="trend-container">
                 <% for(var i = 0; i < randomStory.length; i++){ %>
                 <a href=<%= "/story/" + randomStory[i].title %>>
-                <div class="detail-container" style="margin-bottom: 20px;">
-                    <div style="display: flex;align-items: center;height: 5.5em;">
-                        <div style="padding:5px;border-radius: 10px;background-color: black;">
-                    <span class="genre" style="font-weight: bold;color:white;"><%= randomStory[i].genre %></span>
+                <div class="detail-container">
+                    <div class="box-1">
+                        <div class="box-2">
+                            <span class="genre" id="th"><%= randomStory[i].genre %></span>
                 </div>
-                    <span class="title" style="margin-left: 20px;" ><%= randomStory[i].title %></span>
+                    <span class="title" id="th"><%= randomStory[i].title %></span>
                 </div>           
                 </div> </a>
                 <% } %>
-                
-
         </div>
     </div>
-        <div class="col-lg-5">
+    <div class="col-lg-5 responsive">
             <h5 id="popular-head">Horror Day<span class="badge bg-danger" id="badge-new">Live</span></h2>
-            <div class="col-md-4 justify-content-end" style="position:relative; margin-left: 20px;">
+            <div class="col-md-4 justify-content-end video-dash">
                 <iframe width="375" height="255" src="https://www.youtube.com/embed/O44K3t54roc" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div style="text-align: left;">
                 <h5 id="previous-head">Previous Night</h2>
             </div>
-            <div class="col-md-4 justify-content-end" style="position:relative; margin-left: 20px;">
+            <div class="col-md-4 justify-content-end video-dash">
                 <iframe width="375" height="255" src="https://www.youtube.com/embed/N4-927C-I2c" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 

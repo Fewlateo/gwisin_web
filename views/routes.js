@@ -8,7 +8,22 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", async (req, res) => {
     const doc = await title.findOne({});
-  res.render("dashboard", {doc});
+    let count = await title.find().countDocuments();
+    
+    let random = Math.floor(Math.random()* count) 
+    if (random <= 15) {
+      const findrandom = await title.find().skip(random).exec()
+      const randomStory = await findrandom.slice(0,5)
+      
+  res.render("dashboard", {doc, randomStory});
+    } else{
+      random=15
+      const findrandom = await title.find().skip(random).exec()
+      const randomStory = await findrandom.slice(0,5)
+      
+  res.render("dashboard", {doc, randomStory});
+    }
+   
 });
 
 router.get("/story", async (req, res) => {
@@ -31,6 +46,19 @@ router.post("/search", async(req,res) => {
     console.log(error)
   }
 })
+
+// router.get("/random", async(req,res) => {
+//   try {
+//     let count = await title.find().countDocuments();
+//    let random = Math.floor(Math.random()* count) 
+//    let randomStory = await title.find().limit(5).skip(random).exec()
+   
+// res.render("dashboard",{randomStory})
+    
+//   }catch(error) {
+//     console.log(error)
+//   }
+// })
 
 router.get("/about", async (req, res) => {
     res.render("about");

@@ -104,14 +104,15 @@ body {
 
 .marquee {
     height: 170px;
-    overflow: hidden;
+    overflow: auto;
     position: relative; 
     color: #ffffff;
     font-size: 150px;
     font-weight: bold;
     margin-bottom:40px;
+    white-space: nowrap;
 }
-.marquee p {
+.marquee span {
     position: absolute;
     width: 100%;
     height: 100%;

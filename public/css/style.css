@@ -14,6 +14,7 @@
 .navbar-brand {
     font-size: 25px;
 }
+
 .navbar-menu.active:after {
     background: none scroll 0 0 #ff781f;
     content: "";
@@ -44,26 +45,18 @@ input[type=text] {
     border-radius: 20px;
     text-align: left;
 }
-.navbar-search {
-    font-size: 1em;
-    margin-top: -10px;
-    padding-top: 15px;
-    padding-right: 25px;
-    color: #dadada;
-    text-decoration: none;
-    line-height: 25px;
-    display: inline-block;
-}
+
 .logo {
     line-height: 10px;
 }
 #logo {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     border-radius: 180px;
     margin-right: 40px;
     /* for more 1440-1080px = margin-left: 40em; */
 }
+
 /* nav-bar */
 
 /* @a */
@@ -72,6 +65,7 @@ body {
     background-color: #313131;
     font-family: 'Red Hat Mono', monospace;
 }
+
 #eng {
     font-family: 'Red Hat Mono', monospace;
 }
@@ -107,39 +101,49 @@ body {
 /* @a */
 
 /* dashboard */
+
 .marquee {
-    height: 250px;
-    position: relative;
-    color: white;
-    width: 100%
-}
-.marquee > * {
-    white-space: nowrap;
-    font-weight: bold;
+    height: 170px;
+    overflow: hidden;
+    position: relative; 
+    color: #ffffff;
     font-size: 150px;
+    font-weight: bold;
+    margin-bottom:40px;
+}
+.marquee p {
     position: absolute;
     width: 100%;
     height: 100%;
-    line-height: 250px;
     margin: 0;
     text-align: center;
-    animation: scroll-left 22s linear 0s infinite;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;
 }
+  
+
+  
 @keyframes scroll-left {
     0% {
-        left: 100%;
-        transform: translateX(0%);
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
     }
     100% {
-        left: 0%;
-        transform: translateX(-200%);
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 #popular-head {
     margin: 1em 5.6em;
 }
 #previous-head {
-    margin-top: 3em;
+    margin-top: 1.5em;
     margin-left: 7em;
 }
 #badge-new {
@@ -149,15 +153,15 @@ body {
 .detail-container {
     background-color: rgb(224, 224, 224);
     width: 100%;
-    height: 5em;
-    margin-left: 2em;
+    height: 5.5em;
+    margin-left: 30px;
     color: #1b1b1b;
     border-radius: 10px;
-    padding: 10px;
+    padding-left: 15px;
 }
 .trend-container {
-    display: flex; 
-    margin-left: 5.6em; 
+    /* display: flex;  */
+    margin-left: 5em; 
     margin-top: 2em;
 }
 /* dashboard */
@@ -410,10 +414,7 @@ section .set div:nth-child(8) {
         margin-top: 10px;
     }
     .navbar-search {
-        margin-top: 10px;
+       border-radius: 20px;
     }
-    section .set {
-        scale: 0.8;
-    }
-}
 /* responsive */
+}

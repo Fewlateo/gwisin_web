@@ -30,7 +30,7 @@
                 <i class="material-icons" style="color: bisque;">menu</i>
             </button>
             <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="navbar-item">
                         <a class="navbar-menu active" href="/dashboard">For You</a>
                     </li>
@@ -43,35 +43,38 @@
                     <li class="navbar-item">
                         <a class="navbar-menu" href="/about">About</a>
                     </li>
-                    <div class="navbar-search">
-                        <input type="text" placeholder="           Search...">
-                    </div>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div>
-        <div class="marquee marqueebox">
-            <span>G W I S I N 귀 신 A HORROR STORY</span>
+    <div class="marquee">  
+        <p>G W I S I N 귀 신 A HORROR STORY</p>
+    </div>
+   
+    <div class="row" style="padding-bottom: 20px;">
+        <div class="col-lg-7">
+            <h5 id="popular-head">Random Story<span class="badge bg-primary" id="badge-new">Trending</span></h2>
+              
+                <div class="trend-container" style="justify-content: center;">
+                
+          
+                <% for(var i = 0; i < randomStory.length; i++){ %>
+                <a href=<%= "/story/" + randomStory[i].title %>>
+                <div class="detail-container" style="margin-bottom: 20px;">
+                    <div style="display: flex;align-items: center;height: 5.5em;">
+                        <div style="padding:5px;border-radius: 10px;background-color: black;">
+                    <span class="genre" style="font-weight: bold;color:white;"><%= randomStory[i].genre %></span>
+                </div>
+                    <span class="title" style="margin-left: 20px;" ><%= randomStory[i].title %></span>
+                </div>           
+                </div> </a>
+                <% } %>
+                
+
         </div>
     </div>
-
-    <div class="row">
-        <div class="col-lg-8">
-            <h5 id="popular-head">Popular Story<span class="badge bg-primary" id="badge-new">Trending</span></h2>
-            <div class="trend-container">
-                <p style="margin-top: 1.8em;">01</p>
-                <div class="detail-container">
-                    <p><%= doc.title %></p>
-                    <p><%= doc.genre %></p>
-                    <button class="material-icons" type="button">star
-                    </button>
-
-            </div>
-        </div>
-        
-        <div class="col-md-4">
+        <div class="col-lg-5">
             <h5 id="popular-head">Horror Day<span class="badge bg-danger" id="badge-new">Live</span></h2>
             <div class="col-md-4 justify-content-end" style="position:relative; margin-left: 20px;">
                 <iframe width="375" height="255" src="https://www.youtube.com/embed/O44K3t54roc" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -84,8 +87,9 @@
             </div>
 
         </div>
-    </div>
+   
 
           
 </body>
+<script src="random.js"></script>
 </html>

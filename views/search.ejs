@@ -56,8 +56,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" >
             <i class="material-icons" style="color: bisque;">menu</i>
         </button>
-        <div class="collapse navbar-collapse " id="menu">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav mr-auto">
                 <li class="navbar-item">
                     <a class="navbar-menu" href="/dashboard">For You</a>
                 </li>
@@ -71,24 +71,19 @@
                     <a class="navbar-menu" href="/about">About</a>
                 </li>
 
-                
-                
-                
-
             </ul>
         </div>
     </nav>
 </header>
 
     <div class="about" id="head-about">
-      <h1 id="header">STORY OF HORROR</h1>
+      <h1 id="header">SEARCH RESULT</h1>
     </div>
     <div>
-      <form method="POST" action="/search">
-      <input style="border-radius: 15px;display: block;margin:0 auto;width: 40%;height: 40px;text-indent: 10px;"  type="search" name="searchStory" placeholder="Search..." aria-label="Search">
-    </form>
-  </div>
-    
+        <form method="POST" action="/search">
+        <input style="border-radius: 15px;display: block;margin:0 auto;width: 40%;height: 40px;text-indent: 10px;"  type="search" name="searchStory" placeholder="Search..." aria-label="Search">
+      </form>
+    </div>
 <!-- ejs code -->
     <div class="box-only-one">
       <% for(var i = 0; i < doc.length; i++){ %>
@@ -108,5 +103,5 @@
     </div>
   </body>
 
-   
+ 
 </html>
